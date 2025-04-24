@@ -1,7 +1,10 @@
 from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
 import httpx
+import spacy.cli
+spacy.cli.download("en_core_web_sm")
 from nlp_utils import extract_keywords
+
 
 app = FastAPI()
 
